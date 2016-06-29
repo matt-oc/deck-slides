@@ -55,7 +55,13 @@ master: image-lrg
 -->
 
 ## __Objects Provide Encapsulation__
-![](./images/encapsulation.png)
+```javascript
+function myFunc (obj) {
+  return function () {
+    return obj.doSomething()
+  }
+}
+```
 ---
 
 <!--
@@ -72,7 +78,13 @@ master: image-lrg
 -->
 
 ## __Objects Provide Accessors__
-![](./images/accessors.png)
+```javascript
+class Person {
+  constructor (name) { this._name = name }
+  get name () { return this._name }
+  set name (val) { this._name = val}
+}
+```
 ---
 
 <!--
@@ -89,7 +101,10 @@ master: image-plain-alt
 -->
 
 ## __Objects Provide Inheritance__
-![](./images/inheritance.png)
+```javascript
+class Person { }
+class Student extends Person {}
+```
 ---
 
 <!--
@@ -129,7 +144,13 @@ master: image-plain-alt
 -->
 
 ## __Are Models Good?__
-![](./images/models.png)
+```javascript
+class Person {
+  save (cb) {
+    db.save(cb)
+  }
+}
+```
 ---
 
 <!--
@@ -244,7 +265,14 @@ master: image-lrg
 -->
 
 ## __The anatomy of a message__
-![](./images/anatomy.png)
+```javascript
+{
+  person: {
+    name: 'Matteo'
+    surname: 'Collina'
+  }
+}
+```
 ---
 
 <!--
@@ -252,7 +280,11 @@ master: image-lrg
 -->
 
 ## __The anatomy of a message__
-![](./images/anatomy-recip.png)
+```javascript
+recipient(message, function (err, result) {
+  console.log(err, result)
+})
+```
 ### result is another message
 ---
 
@@ -261,7 +293,14 @@ master: image-lrg
 -->
 
 ## __Node Callback Style__
-![](./images/callback.png)
+```javascript
+func(msg, function myFunc(err, arg1, arg2, ...) {
+  /*
+  this is called asynchronously
+  err contains an Error object
+  */
+})
+```
 ---
 
 <!--
@@ -289,7 +328,16 @@ master: image-lrg
 -->
 
 ## __Final message__
-![](./images/final-msg.png)
+```javascript
+{
+  role:'person',
+  cmd:'save'
+  person: {
+    name:'Matteo'
+    surname: 'Collina'
+  }
+}
+```
 ---
 
 <!--
@@ -334,7 +382,18 @@ master: image-twin
 -->
 
 ![](./images/seneca-logo.png)
-![](./images/seneca1.png)
+```javascript
+var seneca = require('seneca')()
+seneca.add({
+  role:'user',
+  cmd:'login'
+}, function (args, callback) {
+  var loggedIn = args.username === 'matteo' &&
+                 args.password === 'collina'
+  callback(null, { loggedIn:loggedIn })
+})
+seneca.listen()
+```
 ---
 
 <!--
@@ -342,7 +401,18 @@ master: image-twin
 -->
 
 ![](./images/seneca-logo.png)
-![](./images/seneca2.png)
+```javascript
+var seneca = require('seneca')()
+var client = seneca.client()
+client.act({
+  role:'user',
+  cmd:'login',
+  username:'matteo',
+  password:'collina'
+}, function (err, result) {
+      console.log(result.loggedIn)
+})
+```
 ---
 
 <!--
