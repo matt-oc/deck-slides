@@ -1,5 +1,15 @@
 <!--
 master: title-page
+custom:
+ 0:
+   padding-top: 10%
+   padding-bottom: 0%
+   margin: 0
+ 1:
+   margin: 0
+ 2:
+   font-size: 23px
+   color: blue
 -->
 
 ![](images/nearform.png)
@@ -8,53 +18,63 @@ master: title-page
 
 ---
 <!--
-master: image-plain
+master: image
+custom:
+  1:
+    padding-top: 2.5%
+    width: 60%
 -->
-
-## __Back to School__
+# __Back to School__
 ![](./images/student.png)
 ---
-
 <!--
-master: image-plain
+master: image
+custom:
+  1:
+    padding-top: 2.5%
+    width: 120%
 -->
-
-## __Back to School__
+# __Back to School__
 ![](./images/student1.png)
 ---
-
 <!--
-master: image-plain-alt
+master: image
+custom:
+  1:
+    padding-top: 2.5%
+    width: 120%
 -->
-
-## __Back to School__
+# __Back to School__
 ![](./images/student2.png)
 ---
 
 <!--
-master: splash
+master: section-title
 -->
 
-## __What is an Object?__
+# __What is an Object?__
 ---
 
 <!--
-master: text-list
+master:
+custom:
+ 1:
+   padding-top: 8%
 -->
 
-## __Objects Provide__
-### Encapsulation
-### Accessors
-### Abstraction
-### Inheritance
-### Polymorphism
+# __Objects Provide__
+- Encapsulation
+- Accessors
+- Abstraction
+- Inheritance
+- Polymorphism
 ---
 
 <!--
-master: image-lrg
+master: code
 -->
 
-## __Objects Provide Encapsulation__
+# __Objects Provide Encapsulation__
 ```javascript
 function myFunc (obj) {
   return function () {
@@ -65,19 +85,22 @@ function myFunc (obj) {
 ---
 
 <!--
-master: image-lrg-alt
+master: image
+custom:
+ 1:
+   width: 60%
 -->
 
-## __Objects Provide Accessors__
+# __Objects Provide Accessors__
 ![](./images/getters-setters.jpg)
-### Do we really need them?
+## Do we really need them?
 ---
 
 <!--
-master: image-lrg
+master: code
 -->
 
-## __Objects Provide Accessors__
+# __Objects Provide Accessors__
 ```javascript
 class Person {
   constructor (name) { this._name = name }
@@ -88,19 +111,22 @@ class Person {
 ---
 
 <!--
-master: splash-alt
+master:
+custom:
+ 1:
+   padding-top: 5%
 -->
 
-## __Are Accessors Useful?__
-### to execute code and compute a variable
-### but not for JSONificable content
+# __Are Accessors Useful?__
+- to execute code and compute a variable
+- but not for JSONificable content
 ---
 
 <!--
-master: image-plain-alt
+master: code
 -->
 
-## __Objects Provide Inheritance__
+# __Objects Provide Inheritance__
 ```javascript
 class Person { }
 class Student extends Person {}
@@ -108,42 +134,52 @@ class Student extends Person {}
 ---
 
 <!--
-master: text-list-sm
+master:
+custom:
+ 1:
+   padding-top: 5%
 -->
 
-## __Objects Provide Inheritance__
-### is inheritance needed?
-### is inheritance really remotable?
-### is inheritance good for domain data?
-### is inheritance good for frameworks?
+# __Objects Provide Inheritance__
+- is inheritance needed?
+- is inheritance really remotable?
+- is inheritance good for domain data?
+- is inheritance good for frameworks?
 ---
 
 <!--
-master: splash
+master: section-title
 -->
 
-## __Objects are GOOD__
+# __Objects are GOOD__
 ---
 
 <!--
-master: splash-plain-image
+master: image
+custom:
+  0: 
+    width: 130%
 -->
+![classes](./images/classes.png)
 
 ---
 
 <!--
-master: splash-alt
+master:
+custom:
+ 1:
+   padding-top: 5% 
 -->
 
-## __Are Classes Good?__
-### Yes, they encapsulate behavior
+# __Are Classes Good?__
+- Yes, they encapsulate behavior
 ---
 
 <!--
-master: image-plain-alt
+master: code
 -->
 
-## __Are Models Good?__
+# __Are Models Good?__
 ```javascript
 class Person {
   save (cb) {
@@ -154,48 +190,60 @@ class Person {
 ---
 
 <!--
-master: text-list-sm
+master:
+custom:
+ 1:
+   padding-top: 5%
 -->
 
-## __Are fat models Good?__
-### is it a behavior of a model to save itself?
-### is it good to encapsulate a database connection in a model
-### how can we distribute model access
+# __Are fat models Good?__
+- is it a behavior of a model to save itself?
+- is it good to encapsulate a database connection in a model
+- how can we distribute model access
 ---
 
 <!--
-master: text-list-sm
+master:
+custom:
+ 1:
+   padding-top: 5%
 -->
 
-## __Solution: Let's encapsulate the model!__
-### Java Remote Method Invocation
-### COBRA
-### REST?
+# __Solution: Let's encapsulate the model!__
+- Java Remote Method Invocation
+- COBRA
+- REST?
 ---
 
 <!--
-master: text-list-sm
+master:
+custom:
+ 1:
+   padding-top: 5%
 -->
 
-## __Solution: Build internal API's!__
-### API's as a form of communication between teams!
-### GOOD API's!
-### API's for the sake of distributing!
-### BAD APT's!
+# __Solution: Build internal API's!__
+- API's as a form of communication between teams!
+- GOOD API's!
+- API's for the sake of distributing!
+- BAD APT's!
 ---
 
 <!--
-master: text-list-sm
+master:
+custom:
+ 1:
+   padding-top: 5%
 -->
 
-## __...but I only wanted to access my data!__
-### no code is better than any code
-### code for the sake of code is technical debt
-### is there something wrong?
+# __...but I only wanted to access my data!__
+- no code is better than any code
+- code for the sake of code is technical debt
+- is there something wrong?
 ---
 
 <!--
-master: image-plain-central
+master: image
 -->
 
 
@@ -203,23 +251,33 @@ master: image-plain-central
 ---
 
 <!--
-master: quote
+master: section-title
+custom:
+ 0:
+   font-size: 32px
 -->
 
-## “Writing code for the sole purpose of deleting it” - __Greg Young__
+# “Writing code for the sole purpose of deleting it” - __Greg Young__
 
 ---
 
 <!--
-master: quote
+master: section-title
+custom:
+ 0:
+   font-size: 32px
 -->
 
-## “All code is sh*t” - __Matteo Collina__
+# “All code is sh*t” - __Matteo Collina__
 
 ---
 
 <!--
-master: image-plain-central
+master: image
+custom:
+ 0:
+   padding-top: 5%
+   padding-left: 22%
 -->
 
 
@@ -227,44 +285,53 @@ master: image-plain-central
 ---
 
 <!--
-master: splash-alt
+master: section-title
 -->
 
-## __What if we design messages and not models?__
+# __What if we design messages and not models?__
 ---
 
 <!--
-master: quote
+master: section-title
+custom:
+ 0:
+   font-size: 32px
 -->
 
-## “The key in making great and growable systems is much more to design how its modules communicate rather than what their internal properties and behaviors should be.” - __Alan Key, father of OOP__
+# “The key in making great and growable systems is much more to design how its modules communicate rather than what their internal properties and behaviors should be.” - __Alan Key, father of OOP__
 
 ---
 
 <!--
-master: image-medium-central
+master: image
+custom:
+  0:
+    width: 80%
 -->
 ![](./images/ui-person.png)
 ---
 
 <!--
-master: text-list-sm
+master:
+custom:
+ 1:
+   padding-top: 5%
 -->
 
-## __What is a message?__
-### Maps
-### Arrays
-### Strings
-### Numbers
-### Binary data?
-### Streams of data
+# __What is a message?__
+- Maps
+- Arrays
+- Strings
+- Numbers
+- Binary data?
+- Streams of data
 ---
 
 <!--
-master: image-lrg
+master: code
 -->
 
-## __The anatomy of a message__
+# __The anatomy of a message__
 ```javascript
 {
   person: {
@@ -276,23 +343,23 @@ master: image-lrg
 ---
 
 <!--
-master: image-lrg
+master: code
 -->
 
-## __The anatomy of a message__
+# __The anatomy of a message__
 ```javascript
 recipient(message, function (err, result) {
   console.log(err, result)
 })
 ```
-### result is another message
+## result is another message
 ---
 
 <!--
-master: image-lrg
+master: code
 -->
 
-## __Node Callback Style__
+# __Node Callback Style__
 ```javascript
 func(msg, function myFunc(err, arg1, arg2, ...) {
   /*
@@ -304,30 +371,36 @@ func(msg, function myFunc(err, arg1, arg2, ...) {
 ---
 
 <!--
-master: splash-alt
+master:
+custom:
+ 1:
+   padding-top: 5%
 -->
 
-## __Node Callback Style__
-### async by default
-### no difference if wrapping a db, or a remote endpoint
-### Promises are ok as well :)
+# __Node Callback Style__
+- async by default
+- no difference if wrapping a db, or a remote endpoint
+- Promises are ok as well :)
 ---
 
 <!--
-master: splash-alt
+master:
+custom:
+ 1:
+   padding-top: 5%
 -->
 
-## __How to remote a function call?__
-### how do we encode which function to call
-### truly multi transport from day zero
-### we can store it in the message
+# __How to remote a function call?__
+- how do we encode which function to call
+- truly multi transport from day zero
+- we can store it in the message
 ---
 
 <!--
-master: image-lrg
+master: code
 -->
 
-## __Final message__
+# __Final message__
 ```javascript
 {
   role:'person',
@@ -341,24 +414,40 @@ master: image-lrg
 ---
 
 <!--
-master: image-lrg
+master: image
+custom:
+  1:
+    width: 120%
+    padding-top: 8%
 -->
-
-## __Command pattern!__
+# __Command pattern!__
 ![](./images/command-pattern.png)
 ---
 
 <!--
-master: splash-alt
+master:
+custom:
+ 1:
+   padding-top: 5%
 -->
 
-## __Command pattern!__
-### we do not want a massive switch/case
-### ifs are not good either
+# __Command pattern!__
+- we do not want a massive switch/case
+- ifs are not good either
 ---
 
 <!--
-master: title-alt
+master: 
+custom:
+ 0:
+   padding-top: 7%
+ 1:
+   padding-top: 7%
+   font-size: 36px
+ 2:
+   padding-top: 2.5%
+   color: gray
+   font-size: 36px
 -->
 
 ![](images/nearform.png)
@@ -368,19 +457,29 @@ master: title-alt
 ---
 
 <!--
-master: image-lrg
+master: image
+custom:
+  0:
+    width: 120%
+    padding-top: 5%
+  1:
+    font-size: 40px
 -->
-
-
 ![](./images/seneca-logo.png)
-#### http://senecajs.org
+## http://senecajs.org
 
 ---
 
 <!--
-master: image-twin
+master: image
+custom:
+  0:
+    width: 70%
+  1:
+    height: 90%
+    width: 90%
+    font-size: 20px
 -->
-
 ![](./images/seneca-logo.png)
 ```javascript
 var seneca = require('seneca')()
@@ -397,9 +496,15 @@ seneca.listen()
 ---
 
 <!--
-master: image-twin
+master: image
+custom:
+  0:
+    width: 70%
+  1:
+    height: 90%
+    width: 90%
+    font-size: 20px
 -->
-
 ![](./images/seneca-logo.png)
 ```javascript
 var seneca = require('seneca')()
@@ -416,7 +521,7 @@ client.act({
 ---
 
 <!--
-master: image-twin
+master: image
 -->
 
 ![](./images/seneca-logo.png)
@@ -430,16 +535,34 @@ master: image-twin
 ---
 
 <!--
-master: image-twin
+master: image
+custom:
+  1:
+    padding-top: 5%
+    font-size: 30px
 -->
-
 ![](./images/seneca-logo.png)
 ## DEMO!
-
 ---
 
 <!--
-master: image-twin
+master: image
+custom:
+  1:
+    padding: 2%
+  2:
+    font-size: 28px
+    padding: 2%
+    margin: 0
+  3:
+    font-size: 28px
+    padding: 2%
+    margin: 0
+  4:
+    font-size: 28px
+    padding: 2%
+    margin: 0
+
 -->
 
 ![](./images/seneca-logo.png)
@@ -451,20 +574,37 @@ master: image-twin
 ---
 
 <!--
-master: image-lrg-central
+master: image
+custom:
+  0:
+    width: 120%
 -->
-
-
 ![](./images/me.png)
 ---
 
 <!--
-master: text-list
+master: title-page
+custom:
+ 1:
+  font-size: 28px
+  padding-bottom: 2%
+ 2:
+  margin: 0
+  padding: 0
+  color: blue
+ 3:
+  margin: 0
+  padding: 0
+  color: blue 
+ 4:
+  margin: 0
+  padding: 0
+  color: blue  
 -->
 
-## __Thanks!__
-### If you need help with Node.js
-#### matteo.collina@nearform.com
-#### @matteo.collina on Twitter
-#### www.nearform.com
+# __Thanks!__
+## If you need help with Node.js
+## matteo.collina@nearform.com
+## @matteo.collina on Twitter
+## www.nearform.com
 ---
